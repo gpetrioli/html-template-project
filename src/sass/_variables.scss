@@ -1,0 +1,25 @@
+@import 'utilities';
+
+$config: (
+    breakpoints: (
+        m: 480px,
+        l: 768px,
+        xl: 1200px,
+        h: 1600px,
+    ),
+    colors: (
+        default: rgba(34, 34, 34, 1),
+        titles: rgba(0, 0, 0, 1),
+        brand: rgba(255, 224, 92, 1),
+    )
+);
+
+
+/*
+    function to use from now on to access properties in $config object
+    uses dot syntax
+    eg. config('breakpoints.l')
+*/
+@function config($path) {
+    @return ns($config, $path);
+}

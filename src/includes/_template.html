@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>@@pagetitle | Website Title</title>
+    @@include('partials/_styles.html')
+</head>
+
+<body>
+    <header>
+        @@include('partials/_header.html',{
+        "activemenu": "@@activemenu"
+        })
+    </header>
+    <main>
+        @@include('contents/@@contents')
+        @@include('partials/_footer.html')
+    </main>
+    @@include('partials/_scripts.html')
+</body>
+
+</html>

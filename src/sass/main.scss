@@ -1,0 +1,39 @@
+@import 'variables';
+
+html, body{margin:0;}
+html{height:100%;}
+*,*:before,*:after{box-sizing:border-box}
+body{
+    color:config('colors.default');
+    font-family:'Open Sans', sans-serif;
+}
+
+a{text-decoration:none;}
+
+
+@import "type";
+@import "header";
+@import "footer";
+
+/*  import all sass files 
+    which refer to specific pages here
+*/
+/*
+@import "gallery";
+@import "rooms";
+@import "blog";
+*/
+
+
+/*main page layout*/
+body{
+    /* just some dummy rules to showcase the config abilities*/
+    @media screen and (min-width: config('breakpoints.m')){
+        background-color:config('colors.default')
+    }
+    @media screen and (min-width: config('breakpoints.xl')){
+        background-color:config('colors.brand')
+    }
+}
+main{}
+footer{}

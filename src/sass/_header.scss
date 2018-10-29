@@ -1,0 +1,32 @@
+@import 'variables';
+
+header{
+    max-width:200px;
+    text-align:center;
+    
+    display:flex;
+    flex-direction:column;
+    
+    ul{list-style:none;padding:0;margin:0}
+    ul ul {padding-left:1rem;}
+    
+    nav {
+        margin-top:auto;
+        a{
+            display:block;
+            padding:0.5rem 1rem;
+            color:currentColor;
+            background:rgba(0,0,0,0.1);
+            transition:all 0.2s;
+
+            &:hover{
+            }
+
+            &.active{
+                font-weight:bold;
+                color:black;
+                pointer-events:none;
+            }
+        }
+    }
+}

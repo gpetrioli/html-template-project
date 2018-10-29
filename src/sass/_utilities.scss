@@ -1,0 +1,24 @@
+/*
+    returns property from an object using dot notation
+    pass object and property-deep-path
+*/
+@function ns($map, $path) {
+    $keys: ();
+    $separator: '.';
+    $index : str-index($path, $separator);
+
+    @while $index != null {
+        $item: str-slice($path, 1, $index - 1);
+        $keys: append($keys, $item);
+        $path: str-slice($path, $index + 1);
+        $index : str-index($path, $separator);
+    }
+
+    $keys: append($keys, $path);
+
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
