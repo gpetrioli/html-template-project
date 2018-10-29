@@ -5,4 +5,4 @@ Starter project to bootstrap a HTML template project
 After cloning the project run 
 
  - `npm install` to install the dependencies  
- - `gulp init` to build, serve (by default at http://localhost:3000) and start watching for changes to files
+ - `gulp init` to build, serve (_by default at http://localhost:3000_) and start watching for changes to files
